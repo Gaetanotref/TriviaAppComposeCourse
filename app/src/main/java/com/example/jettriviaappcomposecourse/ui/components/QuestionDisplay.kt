@@ -76,6 +76,7 @@ fun QuestionDisplay(
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.Start
         ) {
+            if (questionIndex.value >= 3) ShowProgress(score = questionIndex.value)
 
             viewModel.data.value.data?.size?.let {
                 QuestionTracker(
